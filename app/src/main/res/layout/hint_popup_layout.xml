@@ -1,0 +1,44 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!-- Skip Question -->
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_launcher_foreground"
+        android:contentDescription="Skip Question"
+        android:id="@+id/hintPopupSkipQuestion"
+        />
+
+    <!-- Open First Letter -->
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_launcher_foreground"
+        android:contentDescription="Open First Letter"
+        android:id="@+id/hintPopupOpenFirstLetter"
+
+        />
+
+    <!-- Open Random Letter -->
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_launcher_foreground"
+        android:contentDescription="Open Random Letter"
+        android:id="@+id/hintPopupOpenRandomLetter"
+
+        />
+
+    <!-- Delete Unsuitable Letters -->
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_launcher_foreground"
+        android:contentDescription="Delete Unsuitable Letters"
+        android:id="@+id/hintPopupDeleteUnsuitableLetters"
+        />
+</LinearLayout>

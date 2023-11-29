@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!-- Add your congratulatory message, score display, buttons, etc. here -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Уровень пройден"
+        android:layout_gravity="center"
+        android:layout_marginBottom="40dp">
+
+    </TextView>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/closeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Закрыть"
+            android:layout_gravity="center_horizontal"
+            android:onClick="onCloseButtonClick" />
+        <Button
+            android:id="@+id/goToNextQuiz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Выбрать Следующий Вопрос"
+            android:layout_gravity="center_horizontal"
+            android:onClick="goToNextQuiz" />
+    </LinearLayout>
+
+</LinearLayout>

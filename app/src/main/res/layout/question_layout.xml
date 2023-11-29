@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:src="@drawable/ic_launcher_foreground">
+
+    <!-- Your other layout elements go here -->
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/exitFromQuestion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|top"
+        android:theme="@style/MyMaterialTheme"
+        android:src="@drawable/arrow_back"/>
+    <LinearLayout
+        android:theme="@style/MyMaterialTheme"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/questionMainLayout"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@color/purple_200">
+
+        <!-- Question text -->
+
+        <TextView
+            android:id="@+id/questionTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="Question Text Here"
+            android:layout_weight="0.05"/>
+        <ImageView
+            android:id="@+id/questionsImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/default_image_placeholder"
+            android:layout_weight="0.3"/>
+
+        <!-- Field for the answer -->
+        <ImageView
+            android:id="@+id/cleanButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_launcher_foreground"
+            android:onClick="onClearButtonClick"
+            android:layout_weight="0.05"/>
+
+        <!-- Grid Layout for Correct Answer Letters -->
+
+
+
+        <GridView
+            android:id="@+id/correctLettersGrid"
+            android:layout_width="100dp"
+            android:background="@color/black"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_height="0dp"
+            android:numColumns="10"
+            android:horizontalSpacing="8dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:visibility="visible"
+            android:layout_weight="0.25">  <!-- Set visibility to "gone" to hide initially -->
+            <!-- Add TextViews for correct answer letters here -->
+        </GridView>
+        <!-- Grid Layout for User's Letters -->
+        <GridView
+            android:id="@+id/selectLettersGrid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="0.25"
+            android:horizontalSpacing="8dp"
+            android:numColumns="10"
+            android:visibility="visible">  <!-- Set visibility to "gone" to hide initially -->
+            <!-- Add EditTexts or Buttons for user's letters here -->
+
+
+        </GridView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:layout_weight="0.1">
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/hintButton"
+                android:padding="20dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/clues"/>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

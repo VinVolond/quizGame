@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/bundleRoot"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <SearchView
+        android:layout_margin="10dp"
+        android:id="@+id/bundleSearchBar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_weight="0.1"/>
+
+    <GridView
+        android:id="@+id/bundleListGridView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:numColumns="2"
+        android:horizontalSpacing="16dp"
+        android:verticalSpacing="16dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:visibility="visible"
+        android:layout_weight="0.8">
+    </GridView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.1"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <Button
+            android:id="@+id/sortOptionsButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sort Options" />
+    </LinearLayout>
+</LinearLayout>
